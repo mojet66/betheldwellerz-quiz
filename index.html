@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bethel Dwellerz Bible Quiz</title>
+    <meta name="description" content="Practice Bible quiz competition questions with 50 random multiple-choice questions from 601 trivia questions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LANDING PAGE -->
+    <section id="landing-page" class="page active">
+        <div class="landing-container">
+            <div class="landing-icon">✝</div>
+            <h1>Bethel Dwellerz<br>Bible Quiz</h1>
+            <p class="landing-subtitle">Test your knowledge of the Scriptures</p>
+            <p class="landing-description">
+                You will be given <strong>50 multiple-choice questions</strong> randomly selected from over 600 Bible trivia questions.
+                You have <strong>2 minutes and 30 seconds</strong> to complete the quiz. 
+                The quiz will auto-submit when the timer runs out.
+            </p>
+            <button id="start-quiz-btn" class="btn btn-primary">Begin Quiz</button>
+        </div>
+    </section>
+
+    <!-- QUIZ PAGE -->
+    <section id="quiz-page" class="page">
+        <header class="quiz-header">
+            <div class="quiz-header-left">
+                <h2>Bible Quiz</h2>
+                <span id="question-counter" class="question-counter">0 / 50</span>
+            </div>
+            <div id="timer" class="timer">2:30</div>
+        </header>
+
+        <form id="quiz-form" class="quiz-form">
+            <div id="questions-container" class="questions-container">
+                <!-- Questions will be injected here -->
+            </div>
+            <div class="submit-area">
+                <button type="submit" id="submit-quiz-btn" class="btn btn-primary">Submit Quiz</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- RESULTS PAGE -->
+    <section id="results-page" class="page">
+        <div class="results-header">
+            <h2>Quiz Results</h2>
+            <div id="score-display" class="score-display">
+                <div class="score-circle">
+                    <span id="score-percent" class="score-percent">0%</span>
+                </div>
+                <div class="score-details">
+                    <p id="score-text" class="score-text"></p>
+                    <p id="score-breakdown" class="score-breakdown"></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-container" class="results-container">
+            <!-- Results will be injected here -->
+        </div>
+
+        <div class="results-footer">
+            <button id="retake-btn" class="btn btn-primary">Try Again</button>
+        </div>
+    </section>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
